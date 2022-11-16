@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Flats</h1>
+
+<div id="flats">
+  <% @flats.each do |flat| %>
+    <%= flat.name %>
+     <i class="fa-solid fa-user-group"></i> <%= flat.number_of_guests  %>
+    <i class="fa-solid fa-euro-sign"></i> <%= flat.prince_per_night  %>
+    <p>
+      <%= link_to "Show this flat", flat %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New flat", new_flat_path %>
